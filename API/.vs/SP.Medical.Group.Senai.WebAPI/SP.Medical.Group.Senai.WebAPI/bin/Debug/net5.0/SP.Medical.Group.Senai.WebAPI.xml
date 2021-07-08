@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SP.Medical.Group.Senai.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:SP.Medical.Group.Senai.WebAPI.Domains.TiposUsuario">
+            <summary>
+            Classe que representa a entidade(tabela) de TiposUsuarios
+            </summary>
+        </member>
+        <member name="T:SP.Medical.Group.Senai.WebAPI.Interfaces.IClinicaRepository">
+            <summary>
+            Interface Clinica responsável repositório ClinicaRepository
+            </summary>
+        </member>
+        <member name="T:SP.Medical.Group.Senai.WebAPI.Interfaces.IConsultaRepository">
+            <summary>
+            Interface responsável pelo repositório ConsultaRepository
+            </summary>
+        </member>
+        <member name="T:SP.Medical.Group.Senai.WebAPI.Interfaces.IEspecialidadeRepository">
+            <summary>
+            Interface responsável pelo responsável EspecialidadeRepository
+            </summary>
+        </member>
+        <member name="T:SP.Medical.Group.Senai.WebAPI.Interfaces.IMedicoRepository">
+            <summary>
+            Interface responsável pelo repositório MedicoRepository
+            </summary>
+        </member>
+        <member name="T:SP.Medical.Group.Senai.WebAPI.Interfaces.IPacienteRepository">
+            <summary>
+            Interface responsável pelo reposiório PacienteRepository
+            </summary>
+        </member>
+        <member name="T:SP.Medical.Group.Senai.WebAPI.Interfaces.ISituacoRepository">
+            <summary>
+            Interface responsável pelo repositório SituacoRepository
+            </summary>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Interfaces.ISituacoRepository.Listar">
+            <summary>
+            Lista as situações
+            </summary>
+            <returns>Uma lista das situações</returns>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Interfaces.ISituacoRepository.Atualizar(System.Int32,SP.Medical.Group.Senai.WebAPI.Domains.Situaco)">
+            <summary>
+            Atualiza uma situação
+            </summary>
+            <param name="id">Id de alguma situação que será atualizada</param>
+            <param name="NovaSituaco">Objeto NovaSituaco com as novas informações</param>
+        </member>
+        <member name="T:SP.Medical.Group.Senai.WebAPI.Interfaces.ITiposUsuarioRepository">
+            <summary>
+            Interface responsável pelo repositório de TiposUsuarioRepository
+            </summary>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Interfaces.ITiposUsuarioRepository.Listar">
+            <summary>
+            Listar todos os tipos de usuários
+            </summary>
+            <returns>Uma lista de tipos de usuários</returns>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Interfaces.ITiposUsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Método que será utilizado para buscar um usuário através do seu ID
+            </summary>
+            <param name="id">Id do usuário que será buscado</param>
+            <returns>Objeto TiposUsuario que será buscado</returns>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Interfaces.ITiposUsuarioRepository.Cadastrar(SP.Medical.Group.Senai.WebAPI.Domains.TiposUsuario)">
+            <summary>
+            Cadastra um novo tipo de usuário
+            </summary>
+            <param name="TipoUsuario">Objeto "NovoUsuario" com as novas informações que serão cadastradas</param>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Interfaces.ITiposUsuarioRepository.Atualizar(System.Int32,SP.Medical.Group.Senai.WebAPI.Domains.TiposUsuario)">
+            <summary>
+            Atualiza um tipo de usuário existente 
+            </summary>
+            <param name="id">id do tipo de usuário que será atualizado</param>
+            <param name="NovoTipousuario">Objeto Tipousuário com as novas informações</param>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Interfaces.ITiposUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um tipo de usuário
+            </summary>
+            <param name="id">Id do tipo de usuário que será deletado</param>
+        </member>
+        <member name="T:SP.Medical.Group.Senai.WebAPI.Interfaces.IUsuarioRepository">
+            <summary>
+            Interface responsável pelo repositório de UsuarioRepository
+            </summary>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Interfaces.IUsuarioRepository.Listar">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns>Uma lista de jogos</returns>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Interfaces.IUsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um usuário existente através do seu ID
+            </summary>
+            <param name="id">Id do usuário que será buscado</param>
+            <returns>Objeto Usuario que será buscado</returns>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Interfaces.IUsuarioRepository.Cadastrar(SP.Medical.Group.Senai.WebAPI.Domains.Usuario)">
+            <summary>
+            Cadastra um novo usuário
+            </summary>
+            <param name="NovoUsuario">Objeto NovoUsuario com as novas informações que serão cadastradas</param>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Interfaces.IUsuarioRepository.Atualizar(System.Int32,SP.Medical.Group.Senai.WebAPI.Domains.Usuario)">
+            <summary>
+            Atualiza um usuário existente
+            </summary>
+            <param name="id">Id do usuário que será atualizado</param>
+            <param name="Usuario">Objeto Usuario com as novas informações</param>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Interfaces.IUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um usuário existente
+            </summary>
+            <param name="id">Id de um usuário existente que será deletado</param>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Valida um usuário 
+            </summary>
+            <param name="email">Email do usuário</param>
+            <param name="senha">Senha do usuário</param>
+            <returns>Objeto Usuário que foi validado</returns>
+        </member>
+        <member name="T:SP.Medical.Group.Senai.WebAPI.Repositories.ConsultaRepository">
+            <summary>
+            Classe responsável pelo repositório de Consulta
+            </summary>
+        </member>
+        <member name="F:SP.Medical.Group.Senai.WebAPI.Repositories.ConsultaRepository.ctx">
+            <summary>
+            Objeto contexto por onde serão chamados os métodos do EF Core
+            </summary>
+        </member>
+        <member name="T:SP.Medical.Group.Senai.WebAPI.Repositories.EspecialidadeRepository">
+            <summary>
+            Classe responsável pelo repositório de Especialidade
+            </summary>
+        </member>
+        <member name="F:SP.Medical.Group.Senai.WebAPI.Repositories.EspecialidadeRepository.ctx">
+            <summary>
+            Objeto contexto por onde serão chamados os métodos do EF Core
+            </summary>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Repositories.EspecialidadeRepository.Atualizar(System.Int32,SP.Medical.Group.Senai.WebAPI.Domains.Especialidade)">
+            <summary>
+            Atualiza uma especialidade existente
+            </summary>
+            <param name="id">Id da especialidade que será atualizado</param>
+            <param name="NovaEspecialidade">Objeto "NovaEspecialidade" com as novas informações</param>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Repositories.EspecialidadeRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca uma especialidade através do Id
+            </summary>
+            <param name="id">Id da especialidade que será buscada</param>
+            <returns>Uma especialidade buscada</returns>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Repositories.EspecialidadeRepository.Cadastrar(SP.Medical.Group.Senai.WebAPI.Domains.Especialidade)">
+            <summary>
+            Cadastra uma nova especialidade
+            </summary>
+            <param name="especialidade">Objeto "especialidade" com as novas informações</param>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Repositories.EspecialidadeRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma especialidade
+            </summary>
+            <param name="id">Id da especialidade que será deletado</param>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Repositories.EspecialidadeRepository.Listar">
+            <summary>
+            Lista todas as especialdades
+            </summary>
+            <returns>Lista de especialidades</returns>
+        </member>
+        <member name="T:SP.Medical.Group.Senai.WebAPI.Repositories.TiposUsuarioRepository">
+            <summary>
+            Classe responsável pelo repositório dos tipos de usuários
+            </summary>
+        </member>
+        <member name="F:SP.Medical.Group.Senai.WebAPI.Repositories.TiposUsuarioRepository.context">
+            <summary>
+            Objeto contexto por onde serão chamados os métodos do EF Core
+            </summary>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Repositories.TiposUsuarioRepository.Atualizar(System.Int32,SP.Medical.Group.Senai.WebAPI.Domains.TiposUsuario)">
+            <summary>
+            Atualiza um tipo de usuário existente 
+            </summary>
+            <param name="id">Id do tipo de usuário que será atualizado</param>
+            <param name="NovoTipousuario">Objeto "NovoTipousuario" com as novas informações</param>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Repositories.TiposUsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um tipo de usuário através do seu Id
+            </summary>
+            <param name="id">Id do tipo de usuário que será buscado</param>
+            <returns>Um tipo de usuário buscado</returns>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Repositories.TiposUsuarioRepository.Cadastrar(SP.Medical.Group.Senai.WebAPI.Domains.TiposUsuario)">
+            <summary>
+            Cadastra um novo tipo de usuário
+            </summary>
+            <param name="TipoUsuario">Objeto "TipoUsuario" que será cadastrado</param>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Repositories.TiposUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um tipo de usuário existente 
+            </summary>
+            <param name="id">ID do tipo de usuário que será deletado</param>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Repositories.TiposUsuarioRepository.Listar">
+            <summary>
+            Lista todos os tipos de usuários
+            </summary>
+            <returns>Uma lista dos tipos de usuários</returns>
+        </member>
+        <member name="T:SP.Medical.Group.Senai.WebAPI.Repositories.UsuarioRepository">
+            <summary>
+            Classe responsável pelo repositório dos Usuários
+            </summary>
+        </member>
+        <member name="M:SP.Medical.Group.Senai.WebAPI.Repositories.UsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="email">email do usuário</param>
+            <param name="senha">senha do usuário</param>
+            <returns>Um objeto Usuario que foi buscado</returns>
+        </member>
+    </members>
+</doc>
